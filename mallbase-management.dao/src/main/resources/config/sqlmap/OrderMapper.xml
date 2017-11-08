@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hlq.mallbase.management.dao.mapper.OrderMapper">
+	<sql id="Base_Column_List">
+		order_Id  , create_Time, channel_Id , order_Name 
+	</sql>
+	
+	<sql id="Base_Column_ListDto">
+		order_Id as orderId , create_Time as createTime, 
+		channel_Id as channelId , order_Name as orderName
+	</sql>
+	
+	<select id="pageQuery" resultType="com.hlq.mallbase.management.facade.dto.OrderDto">
+		select  <include refid="Base_Column_ListDto" /> 
+			from t_order where 1=1 
+				<if test="orderName != null and orderName !=''">
+		            and  order_Name like CONCAT('%',#{orderName},'%') 
+		        </if>
+	</select>
+	
+	 
+
+</mapper>

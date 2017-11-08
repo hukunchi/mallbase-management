@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+	        http://code.alibabatech.com/schema/dubbo
+	        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 提供方应用信息, 用于计算依赖关系 -->
+	<dubbo:application name="mallbase-management" />
+
+    <!-- 使用DUBBO协议在20880端口暴露风控服务 -->
+	<dubbo:protocol name="dubbo" port="${dubbo.hlq.mallbasemanagement.port}" accesslog="true"/>
+
+	<!-- 风控服务ZOOKEEPER注册中心 -->
+	<dubbo:registry id="carloanOrderManagementRegistry" address="${dubbo.hlq.mallbasemanagement.registry.address}" client="zkclient" check="false"/>
+
+    <dubbo:service interface="com.hlq.mallbase.management.facade.intf.DemoFacade" 	ref="demoFacade" 		registry="carloanOrderManagementRegistry" version="${dubbo.hlq.mallbasemanagement.version}" />
+    
+    <import resource="classpath*:config/mallbase-service.xml" />
+
+</beans>
