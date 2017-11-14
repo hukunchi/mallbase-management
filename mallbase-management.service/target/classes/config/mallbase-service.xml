@@ -5,6 +5,6 @@
 	   http://www.springframework.org/schema/beans/spring-beans.xsd"
 	default-lazy-init="false">
 
-    <bean id="demoFacade" class="com.hlq.mallbase.management.facade.impl.DemoFacadeImpl"/>
+    <bean id="userInfoFacade" class="com.hlq.mallbase.management.facade.impl.UserInfoFacadeImpl"/>
 
 </beans>

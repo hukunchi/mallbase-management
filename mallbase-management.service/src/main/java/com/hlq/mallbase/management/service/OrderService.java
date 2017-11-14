@@ -10,7 +10,6 @@
 
 package com.hlq.mallbase.management.service;
 
-import com.hlq.mallbase.management.dao.domain.Order;
 
 /**
  * @author   hukc
@@ -20,7 +19,6 @@ import com.hlq.mallbase.management.dao.domain.Order;
  */
 
 public interface OrderService {
-	public Order findOne(String id);
-
+	
 }
 
