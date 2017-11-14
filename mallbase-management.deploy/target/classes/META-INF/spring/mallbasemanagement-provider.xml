@@ -13,10 +13,10 @@
     <!-- 使用DUBBO协议在20880端口暴露风控服务 -->
 	<dubbo:protocol name="dubbo" port="${dubbo.hlq.mallbasemanagement.port}" accesslog="true"/>
 
-	<!-- 风控服务ZOOKEEPER注册中心 -->
-	<dubbo:registry id="carloanOrderManagementRegistry" address="${dubbo.hlq.mallbasemanagement.registry.address}" client="zkclient" check="false"/>
+	<!-- ZOOKEEPER注册中心 -->
+	<dubbo:registry id="mallbaseManagementRegistry" address="${dubbo.hlq.mallbasemanagement.registry.address}" client="zkclient" check="false"/>
 
-    <dubbo:service interface="com.hlq.mallbase.management.facade.intf.DemoFacade" 	ref="demoFacade" 		registry="carloanOrderManagementRegistry" version="${dubbo.hlq.mallbasemanagement.version}" />
+    <dubbo:service interface="com.hlq.mallbase.management.facade.intf.UserInfoFacade" 	ref="userInfoFacade" registry="mallbaseManagementRegistry" version="${dubbo.hlq.mallbasemanagement.version}" />
     
     <import resource="classpath*:config/mallbase-service.xml" />
 

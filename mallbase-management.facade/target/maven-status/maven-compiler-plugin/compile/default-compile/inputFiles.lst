@@ -1,4 +1,4 @@
-D:\workspace\mallbase-management\mallbase-management.facade\src\main\java\com\hlq\mallbase\management\facade\dto\page\PageQueryDto.java
-D:\workspace\mallbase-management\mallbase-management.facade\src\main\java\com\hlq\mallbase\management\facade\intf\DemoFacade.java
-D:\workspace\mallbase-management\mallbase-management.facade\src\main\java\com\hlq\mallbase\management\facade\dto\OrderDto.java
-D:\workspace\mallbase-management\mallbase-management.facade\src\main\java\com\hlq\mallbase\management\facade\dto\page\PageResultDto.java
+D:\studySpace\mallbase-web\mallbase-management\mallbase-management.facade\src\main\java\com\hlq\mallbase\management\facade\dto\UserDto.java
+D:\studySpace\mallbase-web\mallbase-management\mallbase-management.facade\src\main\java\com\hlq\mallbase\management\facade\intf\UserInfoFacade.java
+D:\studySpace\mallbase-web\mallbase-management\mallbase-management.facade\src\main\java\com\hlq\mallbase\management\facade\dto\page\PageQueryDto.java
+D:\studySpace\mallbase-web\mallbase-management\mallbase-management.facade\src\main\java\com\hlq\mallbase\management\facade\dto\page\PageResultDto.java

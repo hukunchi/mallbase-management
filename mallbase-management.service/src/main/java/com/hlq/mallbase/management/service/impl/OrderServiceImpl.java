@@ -9,11 +9,8 @@
 
 package com.hlq.mallbase.management.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hlq.mallbase.management.dao.domain.Order;
-import com.hlq.mallbase.management.dao.mapper.OrderMapper;
 import com.hlq.mallbase.management.service.OrderService;
 
 /**
@@ -24,15 +21,6 @@ import com.hlq.mallbase.management.service.OrderService;
  */
 @Service
 public class OrderServiceImpl implements OrderService {
-	@Autowired
-	private OrderMapper orderMapper;
-
-	@Override
-	public Order findOne(String id) {
-
-		
-		return orderMapper.selectById(id);
-
-	}
+	
 
 }
